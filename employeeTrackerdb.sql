@@ -6,14 +6,12 @@ use employeeTrackerdb;
 
 create table department(
     id int not null auto_increment,
-    ID varchar(30) null,
     handle varchar(30) null,
     primary key(id)
 );
 
 create table job(
     id int not null auto_increment,
-    ID varchar(30) null,
     title varchar(30) null,
     salary decimal(7,0) null,
     department_id int null,
@@ -28,3 +26,10 @@ create table employee(
     manager_id int null,
     primary key(id)
 );
+
+insert into department (handle) values ("Engineering");
+insert into department (handle) values ("Sales");
+insert into department (handle) values ("Financing");
+insert into department (handle) values ("Legal");
+
+insert into job (title, salary, department_id) values ("Salesman", 80000, 2);
